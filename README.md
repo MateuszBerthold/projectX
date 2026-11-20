@@ -1,21 +1,28 @@
-# brandscale – strona usług
+# brandscale – strona startowa
 
-Statyczna strona (HTML + CSS, bez frameworków i bez procesu budowania) prezentująca usługi brandscale dla marek: sprzedaż w modelu depozytowym, testowanie rynków i marketplace'ów oraz certyfikację produktów.
+Prosta, statyczna strona (HTML + CSS, bez frameworków i bez budowania) prezentująca usługi brandscale dla marek.
+
+Adres po włączeniu GitHub Pages: https://mateuszberthold.github.io/projectX/
 
 ## Pliki
 
 - `index.html` – treść strony
-- `styles.css` – wygląd (kolory i krój zgodne z księgą znaku: grafit `#121417`, zieleń `#0F9D6B`, zieleń na ciemnym `#3DDC97`, Space Grotesk + Inter)
+- `styles.css` – wygląd (kolory i krój z księgi znaku)
 - `favicon.svg` – ikona karty przeglądarki
+- `assets/marketplaces/` – logotypy platform (Allegro, Kaufland)
+- `LICENSE-lucide.txt` – licencja ikon Lucide
 
 ## Publikacja na GitHub Pages
 
-1. Utwórz repozytorium i wrzuć do niego te pliki (w głównym katalogu).
-2. W repozytorium: **Settings → Pages → Build and deployment → Source: Deploy from a branch**, gałąź `main`, katalog `/ (root)`.
-3. Po chwili strona będzie dostępna pod adresem `https://<twoj-login>.github.io/<nazwa-repo>/`.
+1. Wrzuć wszystkie pliki do głównego katalogu repozytorium (razem z folderem `assets`).
+2. **Settings → Pages → Deploy from a branch**, gałąź `main`, katalog `/ (root)`.
 
-## Do uzupełnienia przed publikacją
+## Do uzupełnienia
 
-- **Kontakt** (`index.html`, sekcja `#kontakt`): zamień `kontakt@example.com` i `+48 000 000 000` na prawdziwe dane.
-- **Formularz**: GitHub Pages nie obsługuje wysyłki formularzy. Załóż formularz w usłudze typu Formspree (lub podobnej) i wstaw jej adres w miejsce `https://formspree.io/f/TWOJ_ID` w atrybucie `action`. Alternatywnie usuń formularz i zostaw sam e-mail.
-- **Rok w stopce** – obecnie 2026.
+- Sekcja `#kontakt` w `index.html`: zamień `kontakt@example.com` i `+48 000 000 000` na prawdziwe dane (w `href` i w tekście).
+
+## Źródła grafik
+
+- Ikony usług i kroków: [Lucide](https://lucide.dev) (licencja ISC, treść w `LICENSE-lucide.txt`), wklejone bezpośrednio w HTML.
+- Logotypy Allegro i Kaufland: [Simple Icons](https://simpleicons.org) (pliki CC0), w kolorach marek. Logotypy są znakami towarowymi ich właścicieli – przed publikacją sprawdź zasady używania znaków danej platformy.
+- Amazon jest pokazany jako nazwa tekstowa: Simple Icons nie udostępnia jego logotypu. Oficjalny plik możesz dodać zgodnie z wytycznymi Amazon dotyczącymi znaków towarowych.

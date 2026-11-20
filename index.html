@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>brandscale – sprzedaż marek na zagranicznych marketplace'ach</title>
-  <meta name="description" content="Sprzedajemy, testujemy i certyfikujemy produkty marek na Allegro, Amazonie, Kauflandzie i innych marketplace'ach. Listingi, logistyka i obsługa kanału po naszej stronie.">
+  <title>brandscale – Twoja marka na marketplace'ach</title>
+  <meta name="description" content="Wystawiamy, sprzedajemy i wysyłamy produkty Twojej marki na Allegro, Kauflandzie, Amazonie i innych marketplace'ach, także za granicą.">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,209 +13,150 @@
 </head>
 <body>
 
-<header class="site-header">
-  <div class="container header-row">
-    <a href="#top" class="logo" aria-label="brandscale – strona główna">
-      <span class="logo-brand">brand</span><span class="logo-scale">scale</span>
+<header class="header">
+  <div class="wrap header-row">
+    <a href="#" class="logo" aria-label="brandscale – strona główna">
+      <span class="logo-light">brand</span><span class="logo-bold">scale</span>
       <svg class="logo-arrow" aria-hidden="true" viewBox="0 0 18 18"><path d="M3 15 L15 3 M6 3 H15 V12"/></svg>
     </a>
-    <nav class="nav" aria-label="Menu główne">
+    <nav class="nav" aria-label="Menu">
       <a href="#uslugi">Usługi</a>
-      <a href="#zaplecze">Zaplecze</a>
-      <a href="#jak">Jak zaczynamy</a>
-      <a href="#kontakt" class="btn btn-primary btn-sm">Umów rozmowę</a>
+      <a href="#jak">Jak to działa</a>
+      <a href="#kontakt" class="btn btn-dark btn-small">Kontakt</a>
     </nav>
   </div>
 </header>
 
 <main>
 
-  <section id="top" class="hero">
-    <div class="container stack-lg">
-      <p class="eyebrow eyebrow-light">Ekspansja polskich marek na marketplace'y</p>
-      <h1>Twoja marka na zagranicznych marketplace'ach. Bez budowania wszystkiego od zera.</h1>
-      <p class="hero-lead">Sprzedajemy, testujemy i certyfikujemy produkty marek na Allegro, Amazonie, Kauflandzie i innych platformach. Bierzemy na siebie listingi, logistykę i obsługę kanału, a Ty zachowujesz kontrolę nad tym, jak marka jest prezentowana.</p>
-      <div class="btn-row">
-        <a href="#kontakt" class="btn btn-primary">Sprawdźmy Twoją markę</a>
-        <a href="#uslugi" class="btn btn-ghost">Zobacz usługi</a>
+  <section class="hero">
+    <div class="wrap hero-row">
+      <div class="hero-text">
+        <h1>Twoja marka na marketplace'ach. Także za granicą.</h1>
+        <p class="lead">Wystawiamy, sprzedajemy i wysyłamy Twoje produkty. Ty skupiasz się na marce.</p>
+        <div class="buttons">
+          <a href="#kontakt" class="btn btn-green">Porozmawiajmy</a>
+          <a href="#uslugi" class="btn btn-outline">Zobacz, co robimy</a>
+        </div>
+      </div>
+      <div class="platforms" aria-labelledby="platforms-h">
+        <p id="platforms-h" class="platforms-title">Sprzedajemy na</p>
+        <ul class="platform-list">
+          <li class="platform"><img src="assets/marketplaces/allegro.svg" alt="Allegro" class="platform-wordmark"></li>
+          <li class="platform"><img src="assets/marketplaces/kaufland.svg" alt="" class="platform-mark"><span class="platform-name">Kaufland</span></li>
+          <li class="platform"><span class="platform-name platform-name-lg">Amazon</span></li>
+          <li class="platform platform-more"><span>+ inne platformy</span></li>
+        </ul>
       </div>
     </div>
   </section>
 
-  <section class="section" aria-labelledby="problem-h">
-    <div class="container stack-xl">
-      <div class="section-head">
-        <p class="eyebrow">Znasz to?</p>
-        <h2 id="problem-h">Ekspansja za granicę zwykle zatrzymuje się na tych samych barierach</h2>
-      </div>
-      <div class="grid grid-3">
-        <div class="card">
-          <p class="card-num">01</p>
-          <h3>Ekspansja trwa za długo</h3>
-          <p>Rejestracje (środowiskowe i na marketplace'ach) oraz własna logistyka blokują wejście na nowe rynki na miesiące.</p>
-        </div>
-        <div class="card">
-          <p class="card-num">02</p>
-          <h3>Nie wiesz, czy platforma się opłaci</h3>
-          <p>Żeby sprawdzić marketplace, trzeba założyć konta, przejść rejestracje i zainwestować, zanim pojawi się pierwsza sprzedaż.</p>
-        </div>
-        <div class="card">
-          <p class="card-num">03</p>
-          <h3>Marka traci kontrolę za granicą</h3>
-          <p>Lokalni dystrybutorzy nie dbają o prezentację marki i wyciskają maksimum zamiast budować długofalowy rozwój. Listingi nie powstają na EAN-ie producenta.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="uslugi" class="section section-alt" aria-labelledby="uslugi-h">
-    <div class="container stack-xl">
-      <div class="section-head">
-        <p class="eyebrow">Usługi</p>
-        <h2 id="uslugi-h">Trzy sposoby, by Twoja marka sprzedawała za granicą</h2>
-      </div>
-      <div class="grid grid-3">
+  <section id="uslugi" class="section">
+    <div class="wrap">
+      <h2>Co możemy dla Ciebie zrobić</h2>
+      <div class="services">
 
         <article class="service">
-          <p class="service-tag">01 · Sprzedaż</p>
-          <h3>Sprzedaż na marketplace'ach w modelu depozytowym</h3>
-          <p>Twój towar trafia do naszego magazynu w depozycie. Wystawiamy go, sprzedajemy i wysyłamy prosto ze stanu, a rozliczamy się po sprzedaży.</p>
-          <ul>
-            <li>Listingi budowane na EAN-ie producenta</li>
-            <li>Szybka wysyłka ze stanu magazynowego</li>
-            <li>Obsługa zwrotów i przepakowania</li>
-          </ul>
-          <div class="pricing">
-            <p class="pricing-label">Model rozliczenia</p>
-            <p class="pricing-text">Opłata wejściowa za wdrożenie i listingi + podział marży po kosztach sprzedaży</p>
-          </div>
+          <span class="icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M11 21.73a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73z"/><path d="M12 22V12"/><polyline points="3.29 7 12 12 20.71 7"/><path d="m7.5 4.27 9 5.15"/></svg>
+          </span>
+          <h3>Sprzedaż za Ciebie</h3>
+          <p>Twój towar czeka w naszym magazynie. Wystawiamy go, sprzedajemy i wysyłamy, a rozliczamy się po sprzedaży.</p>
+          <p class="price">Opłata za start + podział marży</p>
         </article>
 
         <article class="service">
-          <p class="service-tag">02 · Test rynku</p>
-          <h3>Testowanie rynków i marketplace'ów</h3>
-          <p>Wejdź na nowy rynek lub nową platformę bez ryzyka po swojej stronie: bez własnych kont, rejestracji i logistyki.</p>
-          <ul>
-            <li>Zarządzanie kanałem sprzedaży</li>
-            <li>Dane o sprzedaży z różnych platform</li>
-            <li>Wysyłka zamówień z naszego magazynu</li>
-          </ul>
-          <div class="pricing">
-            <p class="pricing-label">Model rozliczenia</p>
-            <p class="pricing-text">Stała opłata za zarządzanie kanałem + success fee od wygenerowanego obrotu</p>
-          </div>
+          <span class="icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M14 2v6a2 2 0 0 0 .245.96l5.51 10.08A2 2 0 0 1 18 22H6a2 2 0 0 1-1.755-2.96l5.51-10.08A2 2 0 0 0 10 8V2"/><path d="M6.453 15h11.094"/><path d="M8.5 2h7"/></svg>
+          </span>
+          <h3>Test nowego rynku</h3>
+          <p>Sprawdź, czy dana platforma lub kraj się opłaca, zanim założysz własne konta i przejdziesz rejestracje.</p>
+          <p class="price">Stała opłata + prowizja od obrotu</p>
         </article>
 
-        <article class="service service-dark">
-          <p class="service-tag">03 · Certyfikacja</p>
-          <h3>Certyfikacja produktu</h3>
-          <p>Niezależna opinia o produkcie i certyfikat sprawdzenia z uzyskaną punktacją. Product proof, który zwiększa widoczność marki w kanałach eksportowych.</p>
-          <ul>
-            <li>Niezależna ocena produktu</li>
-            <li>Certyfikat z punktacją</li>
-            <li>Prawo do wykorzystywania certyfikatu w sprzedaży</li>
-          </ul>
-          <div class="pricing">
-            <p class="pricing-label">Model rozliczenia</p>
-            <p class="pricing-text">Opłata za każdy certyfikowany produkt + roczny abonament za utrzymanie certyfikatu</p>
-          </div>
+        <article class="service">
+          <span class="icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M3.85 8.62a4 4 0 0 1 4.78-4.77 4 4 0 0 1 6.74 0 4 4 0 0 1 4.78 4.78 4 4 0 0 1 0 6.74 4 4 0 0 1-4.77 4.78 4 4 0 0 1-6.75 0 4 4 0 0 1-4.78-4.77 4 4 0 0 1 0-6.76Z"/><path d="m16 9-5.5 5.5L8 12"/></svg>
+          </span>
+          <h3>Certyfikat produktu</h3>
+          <p>Niezależna ocena z punktacją, która pomaga przekonać kupujących za granicą.</p>
+          <p class="price">Opłata za produkt + roczny abonament</p>
         </article>
-      </div>
 
-      <div class="extras">
-        <p class="extras-title">Usługi dodatkowe</p>
-        <p class="chip">Karty produktowe z Rich Contentem</p>
-        <p class="chip">Wdrożenia produktowe</p>
-        <p class="chip">Obsługa kont na marketplace'ach</p>
       </div>
     </div>
   </section>
 
-  <section id="zaplecze" class="section" aria-labelledby="zaplecze-h">
-    <div class="container stack-xl">
-      <div class="section-head">
-        <p class="eyebrow">Zaplecze</p>
-        <h2 id="zaplecze-h">Magazyn i wsparcie prawne pod jednym dachem</h2>
-      </div>
-      <div class="grid grid-2">
-        <div class="card">
-          <h3>Własny magazyn</h3>
-          <ul>
-            <li>Przechowywanie towaru w depozycie</li>
-            <li>Obsługa zwrotów i przepakowania</li>
-            <li>Wysyłka zamówień przy testach rynków</li>
-            <li>Przyjęcie produktów do certyfikacji</li>
-          </ul>
-        </div>
-        <div class="card card-graphite">
-          <h3>Wsparcie prawne Rulity</h3>
-          <ul>
-            <li>Weryfikacja patentów i wzorów przed wejściem na rynek</li>
-            <li>Umowy dystrybucyjne i podział rynków</li>
-            <li>Umowy depozytowe</li>
-            <li>Regulamin certyfikacji</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="jak" class="section section-alt" aria-labelledby="jak-h">
-    <div class="container stack-xl">
-      <div class="section-head">
-        <p class="eyebrow">Jak zaczynamy</p>
-        <h2 id="jak-h">Od rozmowy do pierwszej sprzedaży</h2>
-      </div>
+  <section id="jak" class="section section-white">
+    <div class="wrap">
+      <h2>Jak to działa</h2>
       <ol class="steps">
-        <li><span class="step-num">Krok 1</span><span class="step-title">Rozmowa i wybór rynków</span><span>Ustalamy, które platformy i kraje sprawdzić najpierw.</span></li>
-        <li><span class="step-num">Krok 2</span><span class="step-title">Weryfikacja i umowa</span><span>Sprawdzamy ryzyka prawne i podpisujemy umowę.</span></li>
-        <li><span class="step-num">Krok 3</span><span class="step-title">Wdrożenie</span><span>Tworzymy listingi i przyjmujemy towar do magazynu.</span></li>
-        <li><span class="step-num">Krok 4</span><span class="step-title">Sprzedaż i raporty</span><span>Prowadzimy sprzedaż i pokazujemy wyniki z każdej platformy.</span></li>
+        <li class="step">
+          <span class="icon icon-small" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M2.992 16.342a2 2 0 0 1 .094 1.167l-1.065 3.29a1 1 0 0 0 1.236 1.168l3.413-.998a2 2 0 0 1 1.099.092 10 10 0 1 0-4.777-4.719"/></svg>
+          </span>
+          <div>
+            <h3>Rozmawiamy</h3>
+            <p>Mówisz, co sprzedajesz i gdzie chcesz być.</p>
+          </div>
+        </li>
+        <li class="step">
+          <span class="icon icon-small" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><rect width="8" height="4" x="8" y="2" rx="1" ry="1"/><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><path d="m9 14 2 2 4-4"/></svg>
+          </span>
+          <div>
+            <h3>Przygotowujemy</h3>
+            <p>Umowa, listingi na Twoim EAN-ie i towar w magazynie.</p>
+          </div>
+        </li>
+        <li class="step">
+          <span class="icon icon-small" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"/><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09"/><path d="M9 12a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.4 22.4 0 0 1-4 2z"/><path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 .05 5 .05"/></svg>
+          </span>
+          <div>
+            <h3>Sprzedajemy</h3>
+            <p>Ruszamy i pokazujemy Ci wyniki z każdej platformy.</p>
+          </div>
+        </li>
       </ol>
+
+      <ul class="perks">
+        <li>
+          <svg class="perk-icon" aria-hidden="true" viewBox="0 0 24 24"><path d="M18 21V10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1v11"/><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V8a2 2 0 0 1 1.132-1.803l7.95-3.974a2 2 0 0 1 1.837 0l7.948 3.974A2 2 0 0 1 22 8z"/><path d="M6 13h12"/><path d="M6 17h12"/></svg>
+          <span><b>Własny magazyn</b> – szybka wysyłka i obsługa zwrotów</span>
+        </li>
+        <li>
+          <svg class="perk-icon" aria-hidden="true" viewBox="0 0 24 24"><path d="M12 3v18"/><path d="m19 8 3 8a5 5 0 0 1-6 0zV7"/><path d="M3 7h1a17 17 0 0 0 8-2 17 17 0 0 0 8 2h1"/><path d="m5 8 3 8a5 5 0 0 1-6 0zV7"/><path d="M7 21h10"/></svg>
+          <span><b>Wsparcie prawne</b> – umowy, patenty i wzory</span>
+        </li>
+        <li>
+          <svg class="perk-icon" aria-hidden="true" viewBox="0 0 24 24"><path d="M3 5v14"/><path d="M8 5v14"/><path d="M12 5v14"/><path d="M17 5v14"/><path d="M21 5v14"/></svg>
+          <span><b>Twój EAN, Twoja marka</b> – Ty decydujesz o prezentacji</span>
+        </li>
+      </ul>
     </div>
   </section>
 
-  <section id="kontakt" class="contact" aria-labelledby="kontakt-h">
-    <div class="container contact-row">
-      <div class="contact-text">
-        <h2 id="kontakt-h">Sprawdźmy, gdzie Twoja marka może sprzedawać</h2>
-        <p>Napisz, jakie produkty sprzedajesz i na jakich rynkach chcesz być. Odezwiemy się z propozycją pierwszych kroków.</p>
-        <p class="contact-data">
-          <a href="mailto:kontakt@example.com">kontakt@example.com</a> · <a href="tel:+48000000000">+48 000 000 000</a>
-        </p>
+  <section id="kontakt" class="contact">
+    <div class="wrap contact-box">
+      <h2>Porozmawiajmy o Twojej marce</h2>
+      <p>Napisz, co sprzedajesz i gdzie chcesz być. Odpowiemy z propozycją pierwszych kroków.</p>
+      <div class="buttons buttons-center">
+        <a href="mailto:kontakt@example.com" class="btn btn-dark">
+          <svg class="btn-icon" aria-hidden="true" viewBox="0 0 24 24"><path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7"/><rect x="2" y="4" width="20" height="16" rx="2"/></svg>
+          kontakt@example.com
+        </a>
+        <a href="tel:+48000000000" class="btn btn-outline-dark">+48 000 000 000</a>
       </div>
-      <!-- Formularz: wstaw adres usługi obsługującej formularze (np. Formspree) w atrybucie action. -->
-      <form class="form" action="https://formspree.io/f/TWOJ_ID" method="POST">
-        <div class="field">
-          <label for="f-name">Imię i nazwisko</label>
-          <input id="f-name" name="imie" type="text" autocomplete="name" required>
-        </div>
-        <div class="field">
-          <label for="f-brand">Marka / firma</label>
-          <input id="f-brand" name="marka" type="text" autocomplete="organization">
-        </div>
-        <div class="field">
-          <label for="f-mail">E-mail</label>
-          <input id="f-mail" name="email" type="email" autocomplete="email" required>
-        </div>
-        <div class="field">
-          <label for="f-msg">Jakie produkty i rynki?</label>
-          <textarea id="f-msg" name="wiadomosc" rows="4"></textarea>
-        </div>
-        <button type="submit" class="btn btn-primary">Wyślij zapytanie</button>
-      </form>
     </div>
   </section>
 
 </main>
 
-<footer class="site-footer">
-  <div class="container footer-row">
-    <p class="logo logo-sm">
-      <span class="logo-brand">brand</span><span class="logo-scale">scale</span>
-      <svg class="logo-arrow" aria-hidden="true" viewBox="0 0 18 18"><path d="M3 15 L15 3 M6 3 H15 V12"/></svg>
-    </p>
-    <p>© 2026 brandscale · Sprzedaż, testy rynków i certyfikacja dla marek</p>
+<footer class="footer">
+  <div class="wrap footer-row">
+    <p>© 2026 brandscale</p>
+    <p class="credits">Logotypy platform należą do ich właścicieli.</p>
   </div>
 </footer>
 
