@@ -90,20 +90,25 @@ a:focus-visible, button:focus-visible { outline: 3px solid var(--green); outline
 .lead { font-size: 21px; color: var(--on-dark-2); max-width: 520px; }
 
 /* Moving marketplace tiles */
-.cloud { flex: 1 1 420px; position: relative; height: 420px; --mx: 0; --my: 0; }
-.cloud-label { position: absolute; top: 0; left: 0; font-size: 15px; font-weight: 600; color: var(--on-dark-2); }
+/* Kafelki w siatce 2 kolumn z przesunięciem – układ nie rozjeżdża się na żadnej szerokości */
+.cloud {
+  flex: 1 1 360px; max-width: 460px;
+  display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px 20px; align-content: center;
+  --mx: 0; --my: 0;
+}
+.cloud-label { grid-column: 1 / -1; font-size: 15px; font-weight: 600; color: var(--on-dark-2); }
 .tile-pos {
-  position: absolute;
+  min-width: 0;
   transform: translate3d(calc(var(--mx) * var(--d) * 1px), calc(var(--my) * var(--d) * 1px), 0);
   transition: transform .4s ease-out;
 }
-.t1 { --d: 18; left: 2%;  top: 14%; }
-.t2 { --d: 30; right: 0;  top: 32%; }
-.t3 { --d: 24; left: 12%; top: 58%; }
-.t4 { --d: 12; right: 8%; top: 78%; }
+.t1 { --d: 14; }
+.t2 { --d: 22; margin-top: 40px; }
+.t3 { --d: 18; }
+.t4 { --d: 10; margin-top: 40px; }
 .tile {
   display: flex; align-items: center; justify-content: center; gap: 10px;
-  min-width: 180px; min-height: 84px; padding: 16px 28px;
+  width: 100%; min-height: 84px; padding: 16px 20px;
   background: var(--white); color: var(--graphite); border-radius: 18px;
   box-shadow: 0 18px 40px rgba(0, 0, 0, .35);
   animation: float 6s ease-in-out infinite;
@@ -167,7 +172,8 @@ a:focus-visible, button:focus-visible { outline: 3px solid var(--green); outline
 .flow-parcel.bump { animation: bump .6s ease-in-out; }
 @keyframes bump { 50% { transform: translateY(-8px) rotate(-6deg); } }
 
-.flow-steps { position: relative; display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 8px; padding-top: 48px; }
+/* gap 0, żeby środki ikon dokładnie pokrywały się z linią i paczką */
+.flow-steps { position: relative; display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 0; padding-top: 48px; }
 .flow-step {
   width: 100%; display: flex; flex-direction: column; align-items: center; gap: 10px;
   padding: 0 0 8px; background: none; border: 0; cursor: pointer; color: var(--text-2);
@@ -190,9 +196,11 @@ a:focus-visible, button:focus-visible { outline: 3px solid var(--green); outline
   margin-top: 32px; padding: 32px; border-radius: var(--radius); background: var(--bg);
   display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 24px;
 }
-.flow-details { flex: 1 1 420px; min-height: 132px; }
-.flow-detail { display: flex; flex-direction: column; gap: 8px; animation: fadeUp .4s ease-out; }
-.flow-detail[hidden] { display: none; }
+/* Wszystkie opisy w jednej komórce siatki: panel ma stałą wysokość i strona nie skacze przy zmianie kroku */
+.flow-details { flex: 1 1 320px; min-width: 0; display: grid; }
+.flow-detail { grid-area: 1 / 1; display: flex; flex-direction: column; gap: 8px; }
+.flow-detail[hidden] { display: flex; visibility: hidden; }
+.flow-detail.enter { animation: fadeUp .4s ease-out; }
 .flow-detail p { color: var(--text-2); max-width: 640px; }
 .flow-count { font-size: 14px; font-weight: 700; color: var(--green-dark) !important; }
 @keyframes fadeUp { from { opacity: 0; transform: translateY(8px); } }
@@ -234,10 +242,9 @@ a:focus-visible, button:focus-visible { outline: 3px solid var(--green); outline
 /* ---------- Mobile ---------- */
 @media (max-width: 760px) {
   .hero { padding: 24px 0 64px; }
-  .cloud { height: auto; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
-  .cloud-label { position: static; grid-column: 1 / -1; }
-  .tile-pos { position: static; transform: none; }
-  .tile { min-width: 0; min-height: 76px; padding: 12px; }
+  .cloud { gap: 12px; max-width: none; }
+  .t2, .t4 { margin-top: 20px; }
+  .tile { min-height: 76px; padding: 12px; }
   .tile-name { font-size: 18px; }
   .tile-name-lg { font-size: 20px; }
   .tile-mark { width: 26px; height: 26px; }

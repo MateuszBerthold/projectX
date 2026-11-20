@@ -45,7 +45,11 @@
       if (n === current) btn.setAttribute('aria-current', 'step');
       else btn.removeAttribute('aria-current');
     });
-    details.forEach(function (d, n) { d.hidden = n !== current; });
+    details.forEach(function (d, n) {
+      d.hidden = n !== current;
+      d.classList.remove('enter');
+      if (n === current && !reduceMotion) { void d.offsetWidth; d.classList.add('enter'); }
+    });
     var pct = (current / last) * 100;
     progress.style.width = pct + '%';
     parcel.style.left = pct + '%';
