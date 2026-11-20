@@ -1,4 +1,4 @@
-// brandscale – interakcje: ruchome kafelki platform i animowany przepływ zamówienia
+// brandscale – interakcje: kafelki platform, karuzela marek, przepływ zamówienia
 (function () {
   var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
@@ -8,7 +8,7 @@
   if (hero && cloud && !reduceMotion) {
     hero.addEventListener('pointermove', function (e) {
       var r = hero.getBoundingClientRect();
-      var x = (e.clientX - r.left) / r.width - 0.5;   // -0.5 … 0.5
+      var x = (e.clientX - r.left) / r.width - 0.5;
       var y = (e.clientY - r.top) / r.height - 0.5;
       cloud.style.setProperty('--mx', (x * 2).toFixed(3));
       cloud.style.setProperty('--my', (y * 2).toFixed(3));
@@ -17,6 +17,30 @@
       cloud.style.setProperty('--mx', 0);
       cloud.style.setProperty('--my', 0);
     });
+  }
+
+  /* ---------- Karuzela marek ---------- */
+  var brands = document.getElementById('brands');
+  if (brands) {
+    var list = brands.querySelector('.brands-list');
+    var toggle = document.getElementById('brands-toggle');
+    if (!reduceMotion && list) {
+      // Druga kopia logotypów = płynna, niekończąca się pętla (ukryta dla czytników ekranu)
+      Array.prototype.slice.call(list.children).forEach(function (li) {
+        var copy = li.cloneNode(true);
+        copy.setAttribute('aria-hidden', 'true');
+        var img = copy.querySelector('img');
+        if (img) img.alt = '';
+        list.appendChild(copy);
+      });
+    }
+    if (toggle) {
+      toggle.addEventListener('click', function () {
+        var paused = brands.classList.toggle('is-paused');
+        toggle.classList.toggle('is-paused', paused);
+        toggle.setAttribute('aria-label', paused ? 'Wznów przewijanie logotypów' : 'Zatrzymaj przewijanie logotypów');
+      });
+    }
   }
 
   /* ---------- Przepływ zamówienia ---------- */
@@ -55,7 +79,7 @@
     parcel.style.left = pct + '%';
     if (!reduceMotion) {
       parcel.classList.remove('bump');
-      void parcel.offsetWidth; // restart animacji
+      void parcel.offsetWidth;
       parcel.classList.add('bump');
     }
   }
@@ -90,7 +114,6 @@
     schedule();
   });
 
-  // Animacja rusza dopiero, gdy sekcja jest widoczna na ekranie
   if ('IntersectionObserver' in window) {
     new IntersectionObserver(function (entries) {
       visible = entries[0].isIntersecting;

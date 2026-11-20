@@ -1,29 +1,34 @@
-# brandscale – strona startowa
+# brandscale – strona usług
 
-Prosta, statyczna strona (HTML + CSS, bez frameworków i bez budowania) prezentująca usługi brandscale dla marek.
+Statyczna strona (HTML + CSS + odrobina JS, bez frameworków i bez budowania) prezentująca usługi brandscale dla marek.
 
 Adres po włączeniu GitHub Pages: https://mateuszberthold.github.io/projectX/
 
-## Pliki
+## Strony
 
-- `index.html` – treść strony
-- `styles.css` – wygląd (kolory i krój z księgi znaku)
-- `script.js` – interakcje: kafelki platform reagujące na kursor i animowany przepływ zamówienia (bez bibliotek)
-- `favicon.svg` – ikona karty przeglądarki
-- `assets/marketplaces/` – logotypy platform (Allegro, Kaufland)
-- `LICENSE-lucide.txt` – licencja ikon Lucide
+- `index.html` – strona główna: ruchome kafelki platform, karuzela „Zaufały nam”, usługi, interaktywny przepływ zamówienia, jak zaczynamy, kontakt
+- `sprzedaz.html` – usługa „Sprzedaż za Ciebie” (model depozytowy)
+- `test-rynku.html` – usługa „Test nowego rynku”
+- `certyfikacja.html` – usługa „Certyfikat produktu”
+
+Wspólne pliki: `styles.css` (wygląd, kolory z księgi znaku), `script.js` (interakcje), `favicon.svg`, folder `assets/`.
 
 ## Publikacja na GitHub Pages
 
-1. Wrzuć wszystkie pliki do głównego katalogu repozytorium (razem z folderem `assets`).
+1. Wrzuć wszystkie pliki i folder `assets` do głównego katalogu repozytorium.
 2. **Settings → Pages → Deploy from a branch**, gałąź `main`, katalog `/ (root)`.
 
-## Do uzupełnienia
+## Do uzupełnienia przed publikacją
 
-- Sekcja `#kontakt` w `index.html`: zamień `kontakt@example.com` i `+48 000 000 000` na prawdziwe dane (w `href` i w tekście).
+1. **Logotypy marek w karuzeli „Zaufały nam”** (`index.html`, sekcja `#brands`):
+   - podmień pliki `assets/brands/marka-1.svg` … `marka-6.svg` na logotypy marek (SVG lub PNG; jeśli zmienisz rozszerzenie, popraw też `src`),
+   - w atrybucie `alt` wpisz nazwę marki zamiast `[Nazwa marki 1]`,
+   - żeby dodać kolejną markę, skopiuj jedną linię `<li class="brand">…</li>`. Karuzela sama zrobi z nich niekończącą się pętlę.
+   - Pokazuj tylko marki, które wyraziły zgodę na użycie ich logotypu.
+2. **Dane kontaktowe**: zamień `kontakt@example.com` i `+48 000 000 000` we wszystkich czterech plikach HTML (w `href` i w tekście).
 
 ## Źródła grafik
 
-- Ikony usług i kroków: [Lucide](https://lucide.dev) (licencja ISC, treść w `LICENSE-lucide.txt`), wklejone bezpośrednio w HTML.
-- Logotypy Allegro i Kaufland: [Simple Icons](https://simpleicons.org) (pliki CC0), w kolorach marek. Logotypy są znakami towarowymi ich właścicieli – przed publikacją sprawdź zasady używania znaków danej platformy.
-- Amazon jest pokazany jako nazwa tekstowa: Simple Icons nie udostępnia jego logotypu. Oficjalny plik możesz dodać zgodnie z wytycznymi Amazon dotyczącymi znaków towarowych.
+- Ikony: [Lucide](https://lucide.dev) (licencja ISC, treść w `LICENSE-lucide.txt`), wklejone bezpośrednio w HTML.
+- Logotypy Allegro i Kaufland: [Simple Icons](https://simpleicons.org) (pliki CC0). To znaki towarowe ich właścicieli – sprawdź zasady używania znaków danej platformy.
+- Amazon jest pokazany jako nazwa tekstowa: Simple Icons nie udostępnia jego logotypu.

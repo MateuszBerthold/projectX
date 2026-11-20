@@ -239,6 +239,85 @@ a:focus-visible, button:focus-visible { outline: 3px solid var(--green); outline
 .footer { background: var(--graphite); color: var(--on-dark-2); padding: 36px 0; font-size: 14px; }
 .footer-row { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px 24px; }
 
+/* ---------- Link "Szczegóły usługi" w kartach ---------- */
+.more {
+  display: inline-flex; align-items: center; gap: 8px; min-height: 44px;
+  font-weight: 600; color: var(--graphite); text-decoration: none;
+}
+.more svg { width: 20px; height: 20px; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; transition: translate .2s; }
+.more:hover { color: var(--green-dark); }
+.more:hover svg { translate: 4px 0; }
+
+/* ---------- Karuzela marek ---------- */
+.brands { padding: 56px 0; background: var(--white); border-bottom: 1px solid var(--line); }
+.brands-head { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px 24px; margin-bottom: 28px; }
+.brands-head h2 { font-size: clamp(22px, 2.6vw, 28px); }
+.brands-viewport {
+  overflow: hidden;
+  -webkit-mask-image: linear-gradient(to right, transparent, #000 8%, #000 92%, transparent);
+          mask-image: linear-gradient(to right, transparent, #000 8%, #000 92%, transparent);
+}
+.brands-list { display: flex; width: max-content; animation: marquee 32s linear infinite; }
+.brands-viewport:hover .brands-list, .brands.is-paused .brands-list { animation-play-state: paused; }
+.brand {
+  flex: none; margin-right: 20px; width: 200px; height: 96px;
+  display: flex; align-items: center; justify-content: center;
+  border: 1px solid var(--line); border-radius: 16px; background: var(--white);
+}
+.brand img { max-width: 150px; max-height: 48px; filter: grayscale(1); opacity: .8; transition: filter .2s, opacity .2s; }
+.brand:hover img { filter: none; opacity: 1; }
+@keyframes marquee { to { transform: translateX(-50%); } }
+.brands .round-btn { width: 44px; height: 44px; }
+
+/* ---------- Podstrony usług ---------- */
+.crumbs { display: flex; flex-wrap: wrap; gap: 8px; font-size: 15px; color: var(--on-dark-2); }
+.crumbs a { color: var(--white); }
+.crumbs a:hover { color: var(--green-light); }
+.sub-icon {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 64px; height: 64px; border-radius: 18px; background: var(--graphite-2); color: var(--green-light);
+}
+.sub-icon svg { width: 32px; height: 32px; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+
+.price-card {
+  flex: 1 1 340px; max-width: 440px; background: var(--white); color: var(--graphite);
+  border-radius: var(--radius); padding: 32px; display: flex; flex-direction: column; gap: 16px;
+}
+.price-card-label { font-size: 14px; font-weight: 700; color: var(--green-dark); }
+.price-item h3 { font-size: 24px; margin-bottom: 4px; }
+.price-item p { color: var(--text-2); }
+.price-plus { font-family: var(--head); font-size: 28px; font-weight: 700; color: var(--green); line-height: 1; }
+
+.features { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px; }
+.feature { flex-direction: row; align-items: flex-start; gap: 16px; }
+.check {
+  flex: none; display: inline-flex; align-items: center; justify-content: center;
+  width: 36px; height: 36px; border-radius: 50%; background: var(--green-tint); color: var(--green-dark);
+}
+.check svg { width: 20px; height: 20px; fill: none; stroke: currentColor; stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round; }
+.feature h3 { font-size: 19px; margin-bottom: 4px; }
+
+.how { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; counter-reset: how; }
+.how-label { font-size: 14px; font-weight: 700; color: var(--green-dark) !important; }
+
+.how-note { margin-top: 28px; color: var(--text-2); }
+.how-note a { color: var(--green-dark); font-weight: 600; }
+.footer-links a[aria-current="page"] { color: var(--green-light); }
+
+.service-links { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
+.service-link {
+  display: flex; align-items: center; gap: 16px; padding: 24px; border-radius: var(--radius);
+  background: var(--white); color: var(--graphite); text-decoration: none; border: 2px solid transparent;
+  transition: border-color .2s;
+}
+.service-link:hover { border-color: var(--green); color: var(--graphite); }
+.service-link span:nth-child(2) { flex: 1; font-family: var(--head); font-size: 20px; font-weight: 700; }
+.service-link .more-arrow { width: 22px; height: 22px; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+
+.footer-links { display: flex; flex-wrap: wrap; gap: 8px 24px; }
+.footer-links a { color: var(--white); text-decoration: none; }
+.footer-links a:hover { color: var(--green-light); }
+
 /* ---------- Mobile ---------- */
 @media (max-width: 760px) {
   .hero { padding: 24px 0 64px; }
@@ -254,10 +333,20 @@ a:focus-visible, button:focus-visible { outline: 3px solid var(--green); outline
   .flow-track { display: none; }
   .flow-steps { grid-template-columns: repeat(3, minmax(0, 1fr)); padding-top: 0; row-gap: 20px; }
   .contact-box { padding: 48px 20px; border-radius: 20px; }
+  .brands { padding: 40px 0; }
+  .brand { width: 160px; height: 80px; margin-right: 14px; }
+  .brand img { max-width: 120px; max-height: 40px; }
+  .price-card { padding: 24px; }
 }
 
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
-  .tile, .flow-detail, .flow-parcel.bump { animation: none; }
+  .tile, .flow-detail, .flow-parcel.bump, .flow-detail.enter { animation: none; }
+  .brands-list { animation: none; flex-wrap: wrap; width: auto; row-gap: 14px; }
+  .brands-viewport { -webkit-mask-image: none; mask-image: none; }
+  .brands .round-btn { display: none; }
   .tile-pos, .flow-progress, .flow-parcel, .flow-icon, .btn { transition: none; }
 }
+
+/* Karty na białych sekcjach dostają szare tło, żeby były widoczne */
+.section-white .card, .section-white .service-link { background: var(--bg); }
