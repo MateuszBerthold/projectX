@@ -8,6 +8,7 @@ Adres po włączeniu GitHub Pages: https://mateuszberthold.github.io/projectX/
 
 - `index.html` – treść strony
 - `styles.css` – wygląd (kolory i krój z księgi znaku)
+- `script.js` – interakcje: kafelki platform reagujące na kursor i animowany przepływ zamówienia (bez bibliotek)
 - `favicon.svg` – ikona karty przeglądarki
 - `assets/marketplaces/` – logotypy platform (Allegro, Kaufland)
 - `LICENSE-lucide.txt` – licencja ikon Lucide

@@ -10,24 +10,25 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400..700&family=Space+Grotesk:wght@400..700&display=swap">
   <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
 </head>
 <body>
 
-<header class="header">
-  <div class="wrap header-row">
-    <a href="#" class="logo" aria-label="brandscale – strona główna">
-      <span class="logo-light">brand</span><span class="logo-bold">scale</span>
-      <svg class="logo-arrow" aria-hidden="true" viewBox="0 0 18 18"><path d="M3 15 L15 3 M6 3 H15 V12"/></svg>
-    </a>
-    <nav class="nav" aria-label="Menu">
-      <a href="#uslugi">Usługi</a>
-      <a href="#jak">Jak to działa</a>
-      <a href="#kontakt" class="btn btn-dark btn-small">Kontakt</a>
-    </nav>
-  </div>
-</header>
-
-<main>
+<div class="top">
+  <header class="header">
+    <div class="wrap header-row">
+      <a href="#" class="logo" aria-label="brandscale – strona główna">
+        <span class="logo-light">brand</span><span class="logo-bold">scale</span>
+        <svg class="logo-arrow" aria-hidden="true" viewBox="0 0 18 18"><path d="M3 15 L15 3 M6 3 H15 V12"/></svg>
+      </a>
+      <nav class="nav" aria-label="Menu">
+        <a href="#uslugi">Usługi</a>
+        <a href="#zamowienie">Obsługa zamówienia</a>
+        <a href="#start">Jak zaczynamy</a>
+        <a href="#kontakt" class="btn btn-light btn-small">Kontakt</a>
+      </nav>
+    </div>
+  </header>
 
   <section class="hero">
     <div class="wrap hero-row">
@@ -36,87 +37,161 @@
         <p class="lead">Wystawiamy, sprzedajemy i wysyłamy Twoje produkty. Ty skupiasz się na marce.</p>
         <div class="buttons">
           <a href="#kontakt" class="btn btn-green">Porozmawiajmy</a>
-          <a href="#uslugi" class="btn btn-outline">Zobacz, co robimy</a>
+          <a href="#uslugi" class="btn btn-outline-light">Zobacz, co robimy</a>
         </div>
       </div>
-      <div class="platforms" aria-labelledby="platforms-h">
-        <p id="platforms-h" class="platforms-title">Sprzedajemy na</p>
-        <ul class="platform-list">
-          <li class="platform"><img src="assets/marketplaces/allegro.svg" alt="Allegro" class="platform-wordmark"></li>
-          <li class="platform"><img src="assets/marketplaces/kaufland.svg" alt="" class="platform-mark"><span class="platform-name">Kaufland</span></li>
-          <li class="platform"><span class="platform-name platform-name-lg">Amazon</span></li>
-          <li class="platform platform-more"><span>+ inne platformy</span></li>
-        </ul>
+
+      <div class="cloud" id="cloud" aria-label="Platformy, na których sprzedajemy: Allegro, Kaufland, Amazon i inne">
+        <p class="cloud-label">Sprzedajemy na</p>
+        <div class="tile-pos t1" data-depth="18"><div class="tile"><img src="assets/marketplaces/allegro.svg" alt="Allegro" class="tile-wordmark"></div></div>
+        <div class="tile-pos t2" data-depth="30"><div class="tile"><img src="assets/marketplaces/kaufland.svg" alt="" class="tile-mark"><span class="tile-name">Kaufland</span></div></div>
+        <div class="tile-pos t3" data-depth="24"><div class="tile"><span class="tile-name tile-name-lg">Amazon</span></div></div>
+        <div class="tile-pos t4" data-depth="12"><div class="tile tile-more">+ inne platformy</div></div>
       </div>
     </div>
   </section>
+</div>
+
+<main>
 
   <section id="uslugi" class="section">
     <div class="wrap">
-      <h2>Co możemy dla Ciebie zrobić</h2>
+      <div class="section-head">
+        <h2>Co możemy dla Ciebie zrobić</h2>
+        <p>Trzy usługi, które możesz łączyć albo wybrać jedną.</p>
+      </div>
       <div class="services">
-
-        <article class="service">
-          <span class="icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24"><path d="M11 21.73a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73z"/><path d="M12 22V12"/><polyline points="3.29 7 12 12 20.71 7"/><path d="m7.5 4.27 9 5.15"/></svg>
-          </span>
+        <article class="card">
+          <span class="icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M11 21.73a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73z"/><path d="M12 22V12"/><polyline points="3.29 7 12 12 20.71 7"/><path d="m7.5 4.27 9 5.15"/></svg></span>
           <h3>Sprzedaż za Ciebie</h3>
           <p>Twój towar czeka w naszym magazynie. Wystawiamy go, sprzedajemy i wysyłamy, a rozliczamy się po sprzedaży.</p>
           <p class="price">Opłata za start + podział marży</p>
         </article>
-
-        <article class="service">
-          <span class="icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24"><path d="M14 2v6a2 2 0 0 0 .245.96l5.51 10.08A2 2 0 0 1 18 22H6a2 2 0 0 1-1.755-2.96l5.51-10.08A2 2 0 0 0 10 8V2"/><path d="M6.453 15h11.094"/><path d="M8.5 2h7"/></svg>
-          </span>
+        <article class="card">
+          <span class="icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M14 2v6a2 2 0 0 0 .245.96l5.51 10.08A2 2 0 0 1 18 22H6a2 2 0 0 1-1.755-2.96l5.51-10.08A2 2 0 0 0 10 8V2"/><path d="M6.453 15h11.094"/><path d="M8.5 2h7"/></svg></span>
           <h3>Test nowego rynku</h3>
           <p>Sprawdź, czy dana platforma lub kraj się opłaca, zanim założysz własne konta i przejdziesz rejestracje.</p>
           <p class="price">Stała opłata + prowizja od obrotu</p>
         </article>
-
-        <article class="service">
-          <span class="icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24"><path d="M3.85 8.62a4 4 0 0 1 4.78-4.77 4 4 0 0 1 6.74 0 4 4 0 0 1 4.78 4.78 4 4 0 0 1 0 6.74 4 4 0 0 1-4.77 4.78 4 4 0 0 1-6.75 0 4 4 0 0 1-4.78-4.77 4 4 0 0 1 0-6.76Z"/><path d="m16 9-5.5 5.5L8 12"/></svg>
-          </span>
+        <article class="card">
+          <span class="icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M3.85 8.62a4 4 0 0 1 4.78-4.77 4 4 0 0 1 6.74 0 4 4 0 0 1 4.78 4.78 4 4 0 0 1 0 6.74 4 4 0 0 1-4.77 4.78 4 4 0 0 1-6.75 0 4 4 0 0 1-4.78-4.77 4 4 0 0 1 0-6.76Z"/><path d="m16 9-5.5 5.5L8 12"/></svg></span>
           <h3>Certyfikat produktu</h3>
           <p>Niezależna ocena z punktacją, która pomaga przekonać kupujących za granicą.</p>
           <p class="price">Opłata za produkt + roczny abonament</p>
         </article>
-
       </div>
     </div>
   </section>
 
-  <section id="jak" class="section section-white">
+  <section id="zamowienie" class="section section-white">
     <div class="wrap">
-      <h2>Jak to działa</h2>
+      <div class="section-head">
+        <h2>Jak obsługujemy zamówienie</h2>
+        <p>Droga jednej paczki: od kliknięcia „Kup” do rozliczenia z Tobą.</p>
+      </div>
+
+      <div class="flow" id="flow">
+        <div class="flow-track" aria-hidden="true">
+          <div class="flow-line"><div class="flow-progress" id="flow-progress"></div></div>
+          <div class="flow-parcel" id="flow-parcel">
+            <svg viewBox="0 0 24 24"><path d="M11 21.73a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73z"/><path d="M12 22V12"/><polyline points="3.29 7 12 12 20.71 7"/></svg>
+          </div>
+        </div>
+
+        <ol class="flow-steps" id="flow-steps">
+          <li><button type="button" class="flow-step" data-step="0">
+            <span class="flow-icon"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="m2.05 2.05 1.099-.028a1 1 0 0 1 1.008.815l2.69 14.347A1 1 0 0 0 7.83 18H18"/><path d="M4.563 5h16.435a1 1 0 0 1 .981 1.204l-1.026 6.226A2 2 0 0 1 18.962 14H6.25"/><circle cx="18" cy="20" r="2"/><circle cx="8" cy="20" r="2"/></svg></span>
+            <span class="flow-name">Zamówienie</span>
+          </button></li>
+          <li><button type="button" class="flow-step" data-step="1">
+            <span class="flow-icon"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8"/><path d="M21 3v5h-5"/><path d="M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16"/><path d="M8 16H3v5"/></svg></span>
+            <span class="flow-name">Przyjęcie</span>
+          </button></li>
+          <li><button type="button" class="flow-step" data-step="2">
+            <span class="flow-icon"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M12 22v-9"/><path d="M15.17 2.21a1.67 1.67 0 0 1 1.63 0L21 4.57a1.93 1.93 0 0 1 0 3.36L8.82 14.79a1.655 1.655 0 0 1-1.64 0L3 12.43a1.93 1.93 0 0 1 0-3.36z"/><path d="M20 13v3.87a2.06 2.06 0 0 1-1.11 1.830l-6 3.08a1.93 1.93 0 0 1-1.78 0l-6-3.08A2.06 2.06 0 0 1 4 16.87V13"/><path d="M21 12.43a1.93 1.93 0 0 0 0-3.36L8.83 2.2a1.64 1.64 0 0 0-1.630 0L3 4.57a1.930 1.930 0 0 0 0 3.36l12.18 6.86a1.636 1.636 0 0 0 1.63 0z"/></svg></span>
+            <span class="flow-name">Pakowanie</span>
+          </button></li>
+          <li><button type="button" class="flow-step" data-step="3">
+            <span class="flow-icon"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M14 18V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v11a1 1 0 0 0 1 1h2"/><path d="M15 18H9"/><path d="M19 18h2a1 1 0 0 0 1-1v-3.65a1 1 0 0 0-.22-.624l-3.48-4.35A1 1 0 0 0 17.52 8H14"/><circle cx="17" cy="18" r="2"/><circle cx="7" cy="18" r="2"/></svg></span>
+            <span class="flow-name">Wysyłka</span>
+          </button></li>
+          <li><button type="button" class="flow-step" data-step="4">
+            <span class="flow-icon"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M12 22V12"/><path d="m16 17 2 2 4-4"/><path d="M21 11.127V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.729l7 4a2 2 0 0 0 2 .001l1.32-.753"/><path d="M3.29 7 12 12l8.71-5"/></svg></span>
+            <span class="flow-name">Dostawa</span>
+          </button></li>
+          <li><button type="button" class="flow-step" data-step="5">
+            <span class="flow-icon"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M11 15h2a2 2 0 1 0 0-4h-3c-.6 0-1.1.2-1.4.6L3 17"/><path d="m7 21 1.6-1.4c.3-.4.8-.6 1.4-.6h4c1.1 0 2.1-.4 2.8-1.2l4.6-4.4a2 2 0 0 0-2.75-2.91l-4.2 3.9"/><path d="m2 16 6 6"/><circle cx="16" cy="9" r="2.9"/><circle cx="6" cy="5" r="3"/></svg></span>
+            <span class="flow-name">Rozliczenie</span>
+          </button></li>
+        </ol>
+
+        <div class="flow-panel">
+          <div class="flow-details" aria-live="polite">
+            <div class="flow-detail" data-detail="0">
+              <p class="flow-count">Krok 1 z 6</p>
+              <h3>Klient kupuje Twój produkt</h3>
+              <p>Zamówienie pada na Allegro, Kauflandzie, Amazonie lub innej platformie, na której wystawiliśmy Twoje produkty.</p>
+            </div>
+            <div class="flow-detail" data-detail="1" hidden>
+              <p class="flow-count">Krok 2 z 6</p>
+              <h3>Zamówienie trafia do nas</h3>
+              <p>Zamówienia ze wszystkich platform spływają do jednego systemu. Nie musisz niczego przepisywać ani pilnować.</p>
+            </div>
+            <div class="flow-detail" data-detail="2" hidden>
+              <p class="flow-count">Krok 3 z 6</p>
+              <h3>Pakujemy z naszego magazynu</h3>
+              <p>Twój towar już na nas czeka, więc kompletujemy i pakujemy zamówienie od razu, bez czekania na dostawę od hurtownika.</p>
+            </div>
+            <div class="flow-detail" data-detail="3" hidden>
+              <p class="flow-count">Krok 4 z 6</p>
+              <h3>Paczka wyjeżdża szybko</h3>
+              <p>Szybka wysyłka utrzymuje wysokie oceny sprzedawcy na platformie, a to przekłada się na widoczność Twoich produktów.</p>
+            </div>
+            <div class="flow-detail" data-detail="4" hidden>
+              <p class="flow-count">Krok 5 z 6</p>
+              <h3>Dostawa i ewentualny zwrot</h3>
+              <p>Klient dostaje paczkę. Jeśli coś odeśle, zwrot przyjmujemy i obsługujemy u siebie: sprawdzamy, przepakowujemy i wracamy z produktem do sprzedaży.</p>
+            </div>
+            <div class="flow-detail" data-detail="5" hidden>
+              <p class="flow-count">Krok 6 z 6</p>
+              <h3>Rozliczamy się z Tobą</h3>
+              <p>Za towar płacimy po sprzedaży, według ustalonego podziału marży. Dostajesz też wyniki z każdej platformy.</p>
+            </div>
+          </div>
+          <div class="flow-controls">
+            <button type="button" class="round-btn" id="flow-prev" aria-label="Poprzedni krok"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="m15 18-6-6 6-6"/></svg></button>
+            <button type="button" class="round-btn round-btn-main" id="flow-play" aria-label="Zatrzymaj animację">
+              <svg class="i-pause" aria-hidden="true" viewBox="0 0 24 24"><rect x="14" y="3" width="5" height="18" rx="1"/><rect x="5" y="3" width="5" height="18" rx="1"/></svg>
+              <svg class="i-play" aria-hidden="true" viewBox="0 0 24 24"><path d="M5 5a2 2 0 0 1 3.008-1.728l11.997 6.998a2 2 0 0 1 .003 3.458l-12 7A2 2 0 0 1 5 19z"/></svg>
+            </button>
+            <button type="button" class="round-btn" id="flow-next" aria-label="Następny krok"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></svg></button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="start" class="section">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Jak zaczynamy</h2>
+        <p>Od pierwszej rozmowy do pierwszej sprzedaży w trzech krokach.</p>
+      </div>
       <ol class="steps">
-        <li class="step">
-          <span class="icon icon-small" aria-hidden="true">
-            <svg viewBox="0 0 24 24"><path d="M2.992 16.342a2 2 0 0 1 .094 1.167l-1.065 3.29a1 1 0 0 0 1.236 1.168l3.413-.998a2 2 0 0 1 1.099.092 10 10 0 1 0-4.777-4.719"/></svg>
-          </span>
-          <div>
-            <h3>Rozmawiamy</h3>
-            <p>Mówisz, co sprzedajesz i gdzie chcesz być.</p>
-          </div>
+        <li class="card step">
+          <span class="icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M2.992 16.342a2 2 0 0 1 .094 1.167l-1.065 3.29a1 1 0 0 0 1.236 1.168l3.413-.998a2 2 0 0 1 1.099.092 10 10 0 1 0-4.777-4.719"/></svg></span>
+          <h3>Rozmawiamy</h3>
+          <p>Mówisz, co sprzedajesz i gdzie chcesz być.</p>
         </li>
-        <li class="step">
-          <span class="icon icon-small" aria-hidden="true">
-            <svg viewBox="0 0 24 24"><rect width="8" height="4" x="8" y="2" rx="1" ry="1"/><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><path d="m9 14 2 2 4-4"/></svg>
-          </span>
-          <div>
-            <h3>Przygotowujemy</h3>
-            <p>Umowa, listingi na Twoim EAN-ie i towar w magazynie.</p>
-          </div>
+        <li class="card step">
+          <span class="icon" aria-hidden="true"><svg viewBox="0 0 24 24"><rect width="8" height="4" x="8" y="2" rx="1" ry="1"/><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><path d="m9 14 2 2 4-4"/></svg></span>
+          <h3>Przygotowujemy</h3>
+          <p>Umowa, listingi na Twoim EAN-ie i towar w magazynie.</p>
         </li>
-        <li class="step">
-          <span class="icon icon-small" aria-hidden="true">
-            <svg viewBox="0 0 24 24"><path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"/><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09"/><path d="M9 12a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.4 22.4 0 0 1-4 2z"/><path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 .05 5 .05"/></svg>
-          </span>
-          <div>
-            <h3>Sprzedajemy</h3>
-            <p>Ruszamy i pokazujemy Ci wyniki z każdej platformy.</p>
-          </div>
+        <li class="card step">
+          <span class="icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"/><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.130-.09-2.91a2.18 2.18 0 0 0-2.91-.09"/><path d="M9 12a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.4 22.4 0 0 1-4 2z"/><path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 .05 5 .05"/></svg></span>
+          <h3>Sprzedajemy</h3>
+          <p>Ruszamy i pokazujemy Ci wyniki z każdej platformy.</p>
         </li>
       </ol>
 
@@ -137,16 +212,18 @@
     </div>
   </section>
 
-  <section id="kontakt" class="contact">
-    <div class="wrap contact-box">
-      <h2>Porozmawiajmy o Twojej marce</h2>
-      <p>Napisz, co sprzedajesz i gdzie chcesz być. Odpowiemy z propozycją pierwszych kroków.</p>
-      <div class="buttons buttons-center">
-        <a href="mailto:kontakt@example.com" class="btn btn-dark">
-          <svg class="btn-icon" aria-hidden="true" viewBox="0 0 24 24"><path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7"/><rect x="2" y="4" width="20" height="16" rx="2"/></svg>
-          kontakt@example.com
-        </a>
-        <a href="tel:+48000000000" class="btn btn-outline-dark">+48 000 000 000</a>
+  <section id="kontakt" class="section section-white">
+    <div class="wrap">
+      <div class="contact-box">
+        <h2>Porozmawiajmy o Twojej marce</h2>
+        <p>Napisz, co sprzedajesz i gdzie chcesz być. Odpowiemy z propozycją pierwszych kroków.</p>
+        <div class="buttons buttons-center">
+          <a href="mailto:kontakt@example.com" class="btn btn-dark">
+            <svg class="btn-icon" aria-hidden="true" viewBox="0 0 24 24"><path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7"/><rect x="2" y="4" width="20" height="16" rx="2"/></svg>
+            kontakt@example.com
+          </a>
+          <a href="tel:+48000000000" class="btn btn-outline-dark">+48 000 000 000</a>
+        </div>
       </div>
     </div>
   </section>
@@ -155,8 +232,11 @@
 
 <footer class="footer">
   <div class="wrap footer-row">
-    <p>© 2026 brandscale</p>
-    <p class="credits">Logotypy platform należą do ich właścicieli.</p>
+    <a href="#" class="logo logo-sm" aria-label="brandscale – do góry">
+      <span class="logo-light">brand</span><span class="logo-bold">scale</span>
+      <svg class="logo-arrow" aria-hidden="true" viewBox="0 0 18 18"><path d="M3 15 L15 3 M6 3 H15 V12"/></svg>
+    </a>
+    <p>© 2026 brandscale · Logotypy platform należą do ich właścicieli.</p>
   </div>
 </footer>
 
